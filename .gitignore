@@ -105,3 +105,6 @@ dist
 
 # custom build output
 build/
+
+# turborepo
+.turbo

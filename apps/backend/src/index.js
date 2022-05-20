@@ -8,8 +8,6 @@ const port = process.env.PORT || 5000;
 
 app.use(express.json());
 
-const useLocalBackend = true;
-
 const client = new authengine.default.Client({
   apiUrl: process.env.AUTHENGINE_API_URL,
   tenantId: process.env.AUTHENGINE_TENANT_ID,
@@ -32,10 +30,6 @@ const protectWithAuthengine = (req, res, next) => {
     return res.status(401).send("Missing token");
   }
 };
-
-app.get("/", function (req, res) {
-  res.sendFile(path.join(__dirname, "/public/index.html"));
-});
 
 app.post("/login", async (req, res) => {
   const { email } = req.body;
