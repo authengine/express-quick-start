@@ -1,13 +1,12 @@
 {
   "name": "express-quick-start",
   "version": "1.0.0",
-  "main": "index.js",
   "repository": "https://github.com/authengine/express-quick-start.git",
   "author": "Alex Yuan <alex@authengine.co>",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon src/index.js",
-    "start": "node build/index.js",
+    "dev": "ts-node-dev src/index.ts",
+    "start": "node dist/index.js",
     "build": "tsc"
   },
   "dependencies": {
